@@ -41,7 +41,8 @@ function sortable_inlines() {
         stop: sortable_stop_hook
     });
     // Change the cursor
-    $target_inlines.css('cursor', 'move');
+    $target_inlines.find('td')
+        .css('cursor', 'move')
     $target_inlines.each(function(index){
         //Which column number is 'Order'
         // hide the 'Order' TH and all the TDs
@@ -51,10 +52,11 @@ function sortable_inlines() {
         $(this).find('tbody tr.has_original td:first-child')
             .css('padding-left', '25px')
             /* TODO Don't hardcode static dir */
-            .css('background-image', 'url(/static/images/admin_sortable/gripper.gif)')
-            .css('background-repeat','repeat-y')
+            .css('background-image', 'url(/static/images/admin_sortable/gripper.png)')
+            .css('background-repeat','no-repeat')
+            .css('background-position','left center')
             .attr('title', 'Drag up and down to re-order these items');
-        $(this).find('tbody td:first-child p').css('padding-left','25px');
+        $(this).find('tbody td:first-child p').css('padding-left','30px');
     })
 }
 
