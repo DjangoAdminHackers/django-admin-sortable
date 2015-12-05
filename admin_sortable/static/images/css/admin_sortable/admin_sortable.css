@@ -1,0 +1,17 @@
+.sortableStacked h3,
+.sortableTabular td {
+    cursor: move;
+}
+
+.sortableStacked div.inline-related h3:first-child,
+.sortableTabular tbody tr.has_original td:first-child {
+    padding-left: 25px;
+    background-image: url(../images/admin_sortable/gripper.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+.sortableStacked div:first-child p,
+.sortableTabular tbody td:first-child p {
+    padding-left:30px;
+}

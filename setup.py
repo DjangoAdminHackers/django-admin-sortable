@@ -3,7 +3,7 @@
 from setuptools import setup
 
 setup(name='admin_sortable',
-    version='0.0.1',
+    version='0.0.2',
     description='Sortable inlines for django admin',
     author='Andy Baker',
     author_email='andy@andybak.net',
