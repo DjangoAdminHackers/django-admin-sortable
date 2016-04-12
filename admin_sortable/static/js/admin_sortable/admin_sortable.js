@@ -62,7 +62,7 @@
         var targetInlines = $(params.sortableSelector).filter(
             function(index) { // Only convert the inlines that has an "order" field.
                 return $(params.orderFieldSelector, this).length > 0;
-            })
+            });
         targetInlines
             .sortable({
                 items: params.itemSelector,
@@ -91,13 +91,15 @@
     }
     
     $(document).ready(function () {
+        
         if ($('body').hasClass('change-form')) {
+            
             // If there's an inline with an 'order' column then make it sortable
             if ($('div.tabular.inline-related .module table input[id$=order]').length) {
-                sortable_tabular_inlines();
+                sortableTabular();
             }
             if ($('div.inline-related input[id$=order]').length) {
-                sortable_stacked_inlines();
+                sortableStacked();
             }
         }
     });
